@@ -1,0 +1,823 @@
+* {
+	box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+button:active, button:focus {
+    outline: none;
+}
+button::-moz-focus-inner {
+    border: 0;
+}
+body {
+    font-family: 'Red Hat Display', sans-serif;
+    overflow-x: hidden;
+}                               /* Backgrounds */
+.first-screen-bg {
+    background: linear-gradient(180deg, rgba(255, 241, 241, 0.5) 0%, rgba(255, 241, 241, 0) 108.69%);
+}
+.footer-bg {
+    background: linear-gradient(360deg, rgba(255, 241, 241, 0.5) 0%, rgba(255, 241, 241, 0) 108.69%);
+}                               /* Container */
+.container {
+    max-width: 1200px;
+    margin: auto;
+}                               /* Header styles */
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.logo-link {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+}
+.logo-text {
+    margin-left: 15px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 19px;
+    line-height: 25px;
+    text-transform: uppercase;
+    color: #035755;
+}
+.header-info {
+    display: flex;
+}
+.nav {
+    display: flex;
+    align-items: center;
+    margin-right: 40px;
+}
+.nav-link {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 22px;
+    color: #035755;
+    text-decoration: none;
+}
+.nav-link:not(:last-child) {
+    margin-right: 40px;
+}                               /* Button styles */
+.button-header {
+    transition: .2s;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-left: 45px;
+    padding-right: 45px;
+    border-radius: 46px;
+    background: none;
+    border: 2px solid #FB4C47;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    color: #FF383D;
+}
+.button-header:hover {
+    background: rgba(250, 86, 82, 0.15);
+}
+.button-header:active {
+    background: #FB4C47;
+    color: #FFFFFF;
+}
+.button-main {
+    transition: .2s;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-left: 55px;
+    padding-right: 55px;
+    background: #FB4C47;
+    box-shadow: 0px 8px 87px rgba(0, 0, 0, 0.1);
+    border: 2px solid #FB4C47;
+    border-radius: 65px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 29px;
+    text-transform: capitalize;
+    color: #FFFFFF;
+}
+.button-main:hover {
+    background: rgba(250, 86, 82, 0.15);
+    color: #FF383D;
+}
+.button-main:active {
+    background: none;
+}
+.button-info {
+    transition: .2s;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+    background: rgba(250, 86, 82, 0.15);
+    border-radius: 65px;
+    border: 2px solid rgba(250, 86, 82, 0);  /* switch off */
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    text-transform: capitalize;
+    color: #FA5652;
+}
+.button-info:hover {
+    background: #FFFFFF;
+    border: 2px solid rgba(250, 86, 82, 0.15);  /* switch off */
+}
+.button-info:active {
+    background: #FB4C47;
+    border: 2px solid #FB4C47;
+    color: #FFFFFF;
+}                               /* Main styles */
+.main, 
+.info {
+    display: flex;
+    align-items: center;
+}
+.contagion, 
+.symptomps, 
+.preventions {
+    z-index: 1;
+    margin-top: 10%;
+    text-align: center;
+}
+.main-subtitle, 
+.info-subtitle, 
+.contagion-subtitle, 
+.symptomps-subtitle, 
+.preventions-subtitle {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 122%;
+    color: #FA5652;
+}
+.main-subtitle, 
+.info-subtitle {
+    margin: 0;
+}
+.contagion-subtitle, 
+.symptomps-subtitle, 
+.preventions-subtitle {
+    text-align: center;
+    margin-bottom: 0;
+}
+.main-title, 
+.info-title, 
+.contagion-title, 
+.symptomps-title, 
+.preventions-title {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 139%;
+    text-transform: capitalize;
+    color: #035755;
+}
+.main-title ,
+.info-title {
+    margin-top: 15px;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    max-width: 630px;
+}
+.contagion-title, 
+.symptomps-title, 
+.preventions-title {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 50px;
+    line-height: 119%;
+    text-align: center;
+    text-transform: capitalize;
+    color: #035755;
+    margin-top: 15px;
+    margin-bottom: 31px;
+}
+.main-text, 
+.info-text, 
+.contagion-text, 
+.symptomps-text, 
+.preventions-text {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 190%;
+    text-transform: capitalize;
+    color: #4B4F51;
+}
+.main-text, 
+.info-text {
+    position: relative;
+    margin-top: 30px;
+    margin-bottom: 55px;
+    max-width: 660px;
+    z-index: 1;
+}
+.contagion-text, 
+.symptomps-text, 
+.preventions-text {
+    margin: auto;
+    text-align: center;
+    max-width: 570px;
+}
+.contagion-text {
+    max-width: 570px;
+}
+.symptomps-text {
+    max-width: 720px;
+}                               /* Regular styles */
+.main-block {
+    max-width: 40%;
+}
+.main-img {
+    max-width: 165%;
+}
+.info {
+    margin-top: 10%;
+}
+.info-heading {
+    z-index: 1;
+    max-width: 50%;
+}
+.info-block {
+    flex: 1;
+    min-height: 500px;
+    background-image: url(../img/second-screen-img.png);
+    background-position: center left;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transform: rotate(-10.07deg);
+}
+.contagion-cards {
+    margin-top: 110px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
+.contagion-card {
+    z-index: 1;
+    padding-top: 62px;
+    padding-bottom: 70px;
+    padding-left: 40px;
+    padding-right: 40px;
+    background: #FFFFFF;
+    box-shadow: 0px 35px 87px rgba(0, 0, 0, 0.11);
+    border-radius: 10px;
+}
+.contagion-card-img {
+    max-width: 230px;
+}
+.contagion-card-img-2 {
+    margin-top: -25px;
+}
+.contagion-card-title {
+    margin-bottom: 13;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 27px;
+    line-height: 147%;
+    text-transform: capitalize;
+    color: #035755;
+}
+.contagion-card-text {
+    margin: 0;
+    max-width: 300px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 185%;
+    text-align: center;
+    text-transform: capitalize;
+    color: #4B4F51;
+}
+.symptomps-img {
+    text-align: center;
+    max-width: 1000px;
+}
+.preventions-main {
+    margin-top: 70px;
+}
+.preventions-card {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+.preventions-card-heading {
+    position: relative;
+}
+.card-number {
+    position: absolute;
+}
+.preventions-card-img {
+    max-width: 500px;
+}
+.preventions-card-title {
+    margin-top: 0;
+    margin-left: 115px;
+    margin-bottom: 20px;
+    text-align: left;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 47px;
+    line-height: 147%;
+    text-transform: capitalize;
+    color: #035755;
+}
+.preventions-card-text {
+    margin-left: 115px;
+    max-width: 530px;
+    text-align: left;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 221%;
+    text-transform: capitalize;
+    color: #4B4F51;
+}
+.map {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+.map-img {
+    max-width: 800px;
+}
+.map-info {
+    padding: 30px;
+    background: linear-gradient(360deg, #FFFBFB -79.45%, #FDFDFD 105.35%);
+    box-shadow: 0px 7px 95px rgba(0, 0, 0, 0.07);
+    border-radius: 0px;
+}
+.map-title {
+    margin-top: 0;
+    margin-bottom: 30px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 58px;
+    color: #035755;
+}
+.map-list {
+    list-style-type: none;
+    padding: 0;
+}
+.list-element {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.list-element:not(:last-child) {
+    margin-bottom: 30px;
+}
+.list-text {
+    margin-left: 20px;
+    margin-right: 50px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 37px;
+    color: #13615F;
+}
+.list-number {
+    margin-right: 15px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 29px;
+    margin-left: auto;
+    color: #035755;
+}
+.question {
+    margin-top: 150px;
+}
+.question-title {
+    z-index: 1;
+    margin: auto;
+    margin-bottom: 60px;
+    max-width: 660px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 60px;
+    line-height: 77px;
+    text-align: center;
+    color: #0C6C44;
+}
+.letter {
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    padding: 18px;
+    width: 790px;
+    background: #FFFFFF;
+    box-shadow: 0px 8px 80px rgba(0, 0, 0, 0.06);
+    border-radius: 57px;
+}
+.letter-textarea {
+    z-index: 1;
+    display: flex;
+    flex: 0.9;
+    resize: none;
+    margin-left: 20px;
+    padding-top: 28px;
+    text-align: center;
+    border: none;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 26px;
+    color: #758681;
+}
+.letter-textarea:focus {
+    padding-top: 0;
+    outline: none;
+    text-align: left;
+}
+:focus::-webkit-input-placeholder {
+    color: transparent;
+}
+:focus::-moz-placeholder {
+    color: transparent;
+}
+:focus:-moz-placeholder {
+    color: transparent;
+}
+:focus:-ms-input-placeholder {
+    color: transparent;
+}
+.footer {
+    margin-top: 140px;
+}
+.footer-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.social-link:not(:last-child) {
+    margin-right: 40px;
+}
+.copyright {
+    margin: 0;
+    text-align: center;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 28px;
+    color: #415E56;
+}
+                                /* Viruses styles */
+.virus {
+    z-index: 0;
+    position: absolute;
+}
+.virus-lit {
+    max-width: 15%;
+}
+.virus-lit-info {
+    z-index: 0;
+    margin-left: 70%;
+    margin-top: 24%;
+    transform: matrix(0.81, -0.59, -0.59, -0.81, 0, 0);
+}
+.virus-med-info {
+    z-index: 0;
+    margin-top: 10%;
+    margin-left: 76%;
+    transform: matrix(0.76, -0.66, -0.66, -0.76, 0, 0);
+}
+.virus-med-contagion {
+    z-index: 0;
+    margin-top: 20%;
+    margin-left: -55%;
+}
+.virus-lit-preventions {
+    z-index: 0;
+    margin-left: 35%;
+    margin-top: 120%;
+}
+.virus-med-preventions-1 {
+    z-index: 0;
+    margin-left: -60%;
+    margin-top: 50%;
+}
+.virus-med-preventions-2 {
+    z-index: 0;
+    margin-left: 40%;
+    margin-top: 100%;
+}
+.virus-med-question {
+    z-index: 0;
+    margin-left: 70%;
+    margin-top: -30%;
+}
+.virus-lit-question {
+    z-index: 0;
+    margin-left: 80%;
+}                               /* Media */
+@media (max-width: 1300px) {
+    .container {
+        max-width: 1000px;
+    }
+    .main {
+        padding-top: 7%;
+    }
+    .info-block {
+        margin-left: -100px;
+    }
+    .contagion-card {
+        height: 500px;
+    }
+    .contagion-card:not(:last-child) {
+        margin-right: 30px;
+    }
+    .symptomps-img {
+        max-width: 900px;
+    }
+    .map-img {
+        max-width: 700px;
+        margin-right: 30px;
+    }
+}
+@media (max-width: 1100px) {
+    .container {
+        max-width: 800px;
+    }
+    .nav-link {
+        font-size: 15px;
+    }
+    .main {
+        padding-top: 10%;
+        padding-bottom: 10%;
+    }
+    .main-title, 
+    .info-title, 
+    .contagion-title, 
+    .symptomps-title {
+        font-size: 35px;
+    }
+    .main-subtitle, 
+    .info-subtitle,
+    .contagion-subtitle, 
+    .symptomps-subtitle {
+        font-size: 25px;
+    }
+    .main-text, 
+    .info-text, 
+    .contagion-text, 
+    .symptomps-text {
+        font-size: 15px;
+    }
+    .contagion-card {
+        padding-top: 50px;
+        padding-bottom: 50px;
+        height: 440px;
+    }
+    .contagion-card-img {
+        max-width: 95%;
+    }
+    .symptomps-img {
+        max-width: 700px;
+    }
+    .preventions-card-img {
+        max-width: 40%;
+    }
+    .preventions-card-title {
+        font-size: 30px;
+    }
+    .preventions-card-text {
+        font-size: 15px;
+    }
+    .map-img {
+        max-width: 70%;
+    }
+    .map-info {
+        padding: 20px;
+    }
+    .map-title {
+        font-size: 20px;
+    }
+    .flag {
+        max-width: 10%;
+    }
+    .list-element {
+        display: flex;
+        justify-content: space-between;
+    }
+    .list-element:not(:last-child) {
+        margin-bottom: 10px;
+    }
+    .list-text {
+        font-size: 13px;
+        margin-right: 25px;
+    }
+    .list-number {
+        margin-right: 0;
+        font-size: 13px;
+    }
+    .list-arrow {
+        margin-left: auto;
+        max-width: 10%;
+    }
+    .social-link:not(:last-child) {
+        margin-right: 10px;
+    }
+    .virus-med {
+        max-width: 25%;
+    }
+    .virus-lit {
+        max-width: 10%;
+    }
+    .virus-med-question {
+        margin-top: -20%;
+    }
+    .virus-lit-question {
+        margin-top: 20%;
+    }
+}
+@media (max-width: 900px) {
+    .container {
+        max-width: 600px;
+    }
+    .logo-img {
+        max-width: 30%;
+    }
+    .logo-text {
+        font-size: 15px;
+    }
+    .nav {
+        margin-right: 0;
+    }
+    .nav-link:not(:last-child) {
+        margin-right: 20px;
+    } 
+    .button-header {
+        display: none;
+    }
+    .main, 
+    .info {
+        text-align: center;
+        margin-top: 15%;
+    }
+    .main-img {
+        display: none;
+    }
+    .info-block {
+        display: none;
+    }
+    .info-heading {
+        min-width: 600px;
+        text-align: center;
+    }
+    .info-text {
+        min-width: 600px;
+    }
+    .contagion-cards {
+        margin-top: 110px;
+        display: flex;
+        flex-direction: column;
+    }
+    .contagion-card {
+        display: flex;
+        align-items: center;
+        min-width: 600px;
+        max-height: 300px;
+        text-align: left;
+    }
+    .contagion-card:not(:last-child) {
+        margin-bottom: 30px;
+        margin-right: 0;
+    }
+    .contagion-card-img {
+        width: 40%;
+        margin-right: 40px;
+    }
+    .contagion-card-text {
+        text-align: left;
+    }
+    .symptomps-img {
+        max-width: 600px;
+    }
+    .number-img {
+        max-width: 70%;
+    }
+    .preventions-card-title {
+        margin-left: 80px;
+    }
+    .preventions-card-text {
+        margin-left: 80px;
+    }
+    .map {
+        display: none;
+    }
+    .question-title {
+        font-size: 30px;
+    }
+    .letter {
+        max-width: 600px;
+        padding: 10px;
+    }
+    .button-main {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-left: 45px;
+        padding-right: 45px;
+    }
+}
+@media (max-width: 600px) {
+    .first-screen-bg {
+        margin: auto;
+    }
+    .container {
+        max-width: 300px;
+    }
+    .header {
+        display: flex;
+        justify-content: center;
+    }
+    .nav {
+        display: none;
+    }
+    .main-subtitle {
+        font-size: 24px;
+    }
+    .main-title {
+        font-size: 25px;
+    }
+    .info {
+        margin-top: 60px;
+    }
+    .info-heading {
+        max-width: 300px;
+        min-width: 300px;
+    }
+    .info-text {
+        min-width: 300px;
+    }
+    .contagion {
+        margin-top: 75px;
+    }
+    .contagion-cards {
+        margin-top: 45px;
+    }
+    .contagion-card {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-left: 20px;
+        padding-right: 20px;
+        text-align: center;
+        max-width: 300px;
+        min-width: 300px;
+        max-height: 200px;
+        min-height: 200px;
+    }
+    .contagion-card-img {
+        display: none;
+    }
+    .contagion-card-title {
+        margin: 0;
+    }
+    .contagion-card-text {
+        text-align: center;
+    }
+    .symptomps-text {
+        display: none;
+    }
+    .symptomps-img {
+        max-width: 300px;
+    }
+    .preventions-title {
+        font-size: 30px;
+    }
+    .preventions-text {
+        font-size: 15px;
+    }
+    .preventions-card-img {
+        display: none;
+    }
+    .preventions-card-text {
+        font-size: 12px;
+    }
+    .question {
+        display: none;
+    }
+    .footer {
+        margin-top: 45px;
+    }
+    .footer-heading {
+        display: flex;
+        justify-content: center;
+    }
+    .logo {
+        margin: 0;
+    }
+} 
